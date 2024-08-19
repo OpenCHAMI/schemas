@@ -6,6 +6,7 @@ type EthernetInterface struct {
 	IP          string `json:"ip,omitempty"`          // IP address of the interface
 	Name        string `json:"name,omitempty"`        // Name of the interface
 	Description string `json:"description,omitempty"` // Description of the interface
+	Enabled     string `json:"enabled,omitempty"`     // Whether interface is enabled
 }
 
 type NetworkAdapter struct {
@@ -26,7 +27,9 @@ type NetworkInterface struct {
 
 type InventoryDetail struct {
 	URI                  string              `json:"uri,omitempty"`                  // URI of the BMC
+	UUID                 string              `json:"uuid,omitempty"`                 // UUID of Node
 	Manufacturer         string              `json:"manufacturer,omitempty"`         // Manufacturer of the Node
+	SystemType           string              `json:"system_type,omitempty"`          // System type of the Node
 	Name                 string              `json:"name,omitempty"`                 // Name of the Node
 	Model                string              `json:"model,omitempty"`                // Model of the Node
 	Serial               string              `json:"serial,omitempty"`               // Serial number of the Node

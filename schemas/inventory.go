@@ -6,7 +6,7 @@ type EthernetInterface struct {
 	IP          string `json:"ip,omitempty"`          // IP address of the interface
 	Name        string `json:"name,omitempty"`        // Name of the interface
 	Description string `json:"description,omitempty"` // Description of the interface
-	Enabled     string `json:"enabled,omitempty"`     // Whether interface is enabled
+	Enabled     bool   `json:"enabled,omitempty"`     // Whether interface is enabled
 }
 
 type NetworkAdapter struct {

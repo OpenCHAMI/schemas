@@ -53,6 +53,10 @@ type Links struct {
 	Managers []string `json:"managers,omitempty"`
 }
 
+type Power struct {
+	State string `json:"state,omitempty"`
+}
+
 type InventoryDetail struct {
 	URI                  string              `json:"uri,omitempty"`                  // URI of the BMC
 	UUID                 string              `json:"uuid,omitempty"`                 // UUID of Node
@@ -64,7 +68,7 @@ type InventoryDetail struct {
 	BiosVersion          string              `json:"bios_version,omitempty"`         // Version of the BIOS
 	EthernetInterfaces   []EthernetInterface `json:"ethernet_interfaces,omitempty"`  // Ethernet interfaces of the Node
 	NetworkInterfaces    []NetworkInterface  `json:"network_interfaces,omitempty"`   // Network interfaces of the Node
-	PowerState           string              `json:"power_state,omitempty"`          // Power state of the Node
+	Power                *Power              `json:"power,omitempty"`                // Power state of the Node
 	ProcessorCount       int                 `json:"processor_count,omitempty"`      // Processors of the Node
 	ProcessorType        string              `json:"processor_type,omitempty"`       // Processor type of the Node
 	MemoryTotal          float32             `json:"memory_total,omitempty"`         // Total memory of the Node in Gigabytes

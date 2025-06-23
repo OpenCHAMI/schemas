@@ -48,6 +48,11 @@ type PowerControl struct {
 	RelatedItem        []*ResourceID `json:"RelatedItem,omitempty"`
 }
 
+type Links struct {
+	Chassis  []string `json:"chassis,omitempty"`
+	Managers []string `json:"managers,omitempty"`
+}
+
 type InventoryDetail struct {
 	URI                  string                 `json:"uri,omitempty"`                  // URI of the BMC
 	UUID                 string                 `json:"uuid,omitempty"`                 // UUID of Node
@@ -74,4 +79,5 @@ type InventoryDetail struct {
 	PowerURL             string                 `json:"PowerURL,omitempty"`             // URL for power control
 	PowerControl         []*PowerControl        `json:"PowerControl,omitempty"`         // Power control actions data
 	Actions              *ComputerSystemActions `json:"Actions,omitempty"`              // Actions for the hardware
+	Links                *Links                 `json:"links,omitempty"`                // Links to related resources
 }

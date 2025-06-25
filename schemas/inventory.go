@@ -54,7 +54,8 @@ type Links struct {
 }
 
 type Power struct {
-	State string `json:"state,omitempty"`
+	State           string   `json:"state,omitempty"`
+	PowerControlIDS []string `json:"power_control_ids,omitempty"`
 }
 
 type InventoryDetail struct {
